@@ -2,7 +2,7 @@ import { Sequelize, DataTypes } from 'sequelize'
 import UserModel from '../models/user.js'
 import bcrypt from 'bcrypt'
 
-const sequelize = new Sequelize('yfest', 'postgres', 'toto', {
+const sequelize = new Sequelize('yfest', 'postgres', 'postgres', {
   host: 'localhost',
   dialect: 'postgresql',
   dialectOptions: {
