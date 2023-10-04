@@ -10,6 +10,8 @@ import login from './src/routes/login.js'
 import register from './src/routes/register.js'
 import getAccountInfo from './src/routes/getAccountInfo.js'
 import removeAccount from './src/routes/removeAccount.js'
+import updateEmail from './src/routes/updateEmail.js'
+import updatePassword from './src/routes/updatePassword.js'
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -31,6 +33,8 @@ login(app)
 register(app)
 getAccountInfo(app)
 removeAccount(app)
+updateEmail(app)
+updatePassword(app)
 
 // Gestion d'erreurs
 app.use(({res}) => {
