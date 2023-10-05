@@ -12,6 +12,7 @@ import getAccountInfo from './src/routes/getAccountInfo.js'
 import removeAccount from './src/routes/removeAccount.js'
 import updateEmail from './src/routes/updateEmail.js'
 import updatePassword from './src/routes/updatePassword.js'
+import createTicket from './src/routes/createTicket'
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -35,6 +36,7 @@ getAccountInfo(app)
 removeAccount(app)
 updateEmail(app)
 updatePassword(app)
+createTicket(app)
 
 // Gestion d'erreurs
 app.use(({res}) => {
