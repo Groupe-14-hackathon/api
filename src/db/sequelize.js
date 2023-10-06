@@ -43,6 +43,12 @@ export const initDb = () => {
         await Festival.create({ nom: 'Jul', date: '12/06/2002' })
           .then(festival => console.log(festival.toJSON()))
 
+        await Festival.create({ nom: 'Delta Festival', date: '19/09/2002' })
+          .then(festival => console.log(festival.toJSON()))
+        
+        await Festival.create({ nom: 'Les vielles charues', date: '02/12/2002' })
+          .then(festival => console.log(festival.toJSON()))
+
         Ticket.create({ transaction: 'No-01', UserId: 1, FestivalId: 1 })
           .then(ticket => console.log(ticket.toJSON()))
         Ticket.create({ transaction: 'No-02', UserId: 1, FestivalId: 2 })
