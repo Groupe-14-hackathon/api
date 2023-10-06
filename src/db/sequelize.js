@@ -40,10 +40,12 @@ export const initDb = () => {
         await Festival.create({ nom: 'Tommorowland', date: '10/10/2002' })
           .then(festival => console.log(festival.toJSON()))
 
-        await Festival.create({ nom: 'Jul', date: '10/10/2002' })
+        await Festival.create({ nom: 'Jul', date: '12/06/2002' })
           .then(festival => console.log(festival.toJSON()))
 
         Ticket.create({ transaction: 'No-01', UserId: 1, FestivalId: 1 })
+          .then(ticket => console.log(ticket.toJSON()))
+        Ticket.create({ transaction: 'No-02', UserId: 1, FestivalId: 2 })
           .then(ticket => console.log(ticket.toJSON()))
       })
 

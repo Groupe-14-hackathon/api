@@ -2,16 +2,15 @@ import { Ticket } from '../db/sequelize.js'
 import { ValidationError, UniqueConstraintError} from 'sequelize'
 
 export default (app) => {
-    app.get('/api/ticket/info', (req, res) => {
+    app.post('/api/ticket/info', (req, res) => {
         console.log(req.body)
         const {
             UserId,
-        } = res.body
-        Ticket.findOne({ where: { UserId } })
-        
-        .then((ticket) => {
+        } = req.body
+        Ticket.findAll({ where: { UserId } })
+        .then((tickets) => {
             const message = `ticket for user ${UserId}`
-            res.json({ message, ticket })
+            res.json({ message, tickets })
         })
         
         .catch(error => {

@@ -15,6 +15,7 @@ import updatePassword from './src/routes/updatePassword.js'
 import buyTicket from './src/routes/buyTicket.js'
 import getTicket from './src/routes/getTicket.js'
 import getFestivalList from './src/routes/getFestivalList.js'
+import getFestival from './src/routes/getFestival.js'
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -41,6 +42,7 @@ updatePassword(app)
 buyTicket(app)
 getTicket(app)
 getFestivalList(app)
+getFestival(app)
 
 // Gestion d'erreurs
 app.use(({res}) => {
