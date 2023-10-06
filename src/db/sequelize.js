@@ -4,8 +4,8 @@ import TicketModel from '../models/ticket.js'
 import FestivalModel from '../models/festival.js'
 import bcrypt from 'bcrypt'
 
-const sequelize = new Sequelize('yfest', 'postgres', 'postgres', {
-  host: 'localhost',
+const sequelize = new Sequelize('yfest', 'yfest_user', 'VdWqYBDeoxSxcnhUnB68LkiyfrysaR0e', {
+  host: 'dpg-ckg0m70eksbs73djddb0-a',
   dialect: 'postgresql',
   dialectOptions: {
     timezone: 'Etc/GMT-2',
