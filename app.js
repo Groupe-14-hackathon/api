@@ -12,6 +12,9 @@ import getAccountInfo from './src/routes/getAccountInfo.js'
 import removeAccount from './src/routes/removeAccount.js'
 import updateEmail from './src/routes/updateEmail.js'
 import updatePassword from './src/routes/updatePassword.js'
+import buyTicket from './src/routes/buyTicket.js'
+import getTicket from './src/routes/getTicket.js'
+import getFestivalList from './src/routes/getFestivalList.js'
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -35,6 +38,9 @@ getAccountInfo(app)
 removeAccount(app)
 updateEmail(app)
 updatePassword(app)
+buyTicket(app)
+getTicket(app)
+getFestivalList(app)
 
 // Gestion d'erreurs
 app.use(({res}) => {
