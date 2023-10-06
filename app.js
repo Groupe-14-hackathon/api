@@ -18,7 +18,7 @@ import getFestivalList from './src/routes/getFestivalList.js'
 import getFestival from './src/routes/getFestival.js'
 
 const app = express()
-const port = 3333
+const port = process.env.PORT || 3333
 
 app
 .use(favicon('./favicon.ico'))
