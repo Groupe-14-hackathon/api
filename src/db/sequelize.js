@@ -3,7 +3,13 @@ import UserModel from '../models/user.js'
 import TicketModel from '../models/ticket.js'
 import FestivalModel from '../models/festival.js'
 import bcrypt from 'bcrypt'
-import credentials from './credentials.json' assert { type: 'json' }
+
+const credentials = {
+  "HOST": "localhost",
+  "DB_NAME": "yfest",
+  "DB_USER": "postgres",
+  "DB_PASSWORD": "postgres"
+}
 
 const { HOST, DB_NAME, DB_USER, DB_PASSWORD } = credentials
 
