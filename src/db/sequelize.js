@@ -3,9 +3,17 @@ import UserModel from '../models/user.js'
 import TicketModel from '../models/ticket.js'
 import FestivalModel from '../models/festival.js'
 import bcrypt from 'bcrypt'
+import credentials from './credentials.json' assert { type: 'json' }
 
-const sequelize = new Sequelize('yfest', 'yfest_user', 'VdWqYBDeoxSxcnhUnB68LkiyfrysaR0e', {
-  host: 'dpg-ckg0m70eksbs73djddb0-a',
+const { HOST, DB_NAME, DB_USER, DB_PASSWORD } = credentials
+
+const host = process.env.HOST || HOST
+const db_name = process.env.DB_NAME || DB_NAME
+const db_user = process.env.DB_USER || DB_USER
+const db_password = process.env.DB_PASSWORD || DB_PASSWORD
+
+const sequelize = new Sequelize(db_name, db_user, db_password, {
+  host,
   dialect: 'postgresql',
   dialectOptions: {
     timezone: 'Etc/GMT-2',

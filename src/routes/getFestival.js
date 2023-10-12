@@ -2,7 +2,7 @@ import { Festival } from '../db/sequelize.js'
 import auth from '../auth/auth.js'
 
 export default (app) => {
-  app.get('/api/festival/:id', (req, res) => {
+  app.get('/api/festival/:id', auth, (req, res) => {
     Festival.findByPk(req.params.id)
       .then(festival => {
         const message = 'Un festival a bien été trouvé.'
