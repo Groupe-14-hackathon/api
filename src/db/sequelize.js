@@ -18,8 +18,8 @@ const db_name = process.env.DB_NAME || DB_NAME
 const db_user = process.env.DB_USER || DB_USER
 const db_password = process.env.DB_PASSWORD || DB_PASSWORD
 
-const sequelize = new Sequelize(db_name, db_user, db_password, {
-  host,
+const sequelize = new Sequelize('yfest', 'yfest_user', 'VdWqYBDeoxSxcnhUnB68LkiyfrysaR0e', {
+  host: 'dpg-ckg0m70eksbs73djddb0-a',
   dialect: 'postgresql',
   dialectOptions: {
     timezone: 'Etc/GMT-2',
